@@ -1,0 +1,48 @@
+.page_number {
+  position: absolute;
+  right: 0;
+  top: 40px;
+  color: var(--primary);
+
+  .page_number_up {
+    width: 250px;
+    margin-left: 50px;
+    text-align: center;
+
+    span {
+      right: 0;
+    }
+  }
+
+  .page_number_down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+
+    .line {
+      width: 250px;
+      margin-left: 20px;
+      height: 1px;
+      background-color: var(--primary);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page_number {
+    span {
+      font-size: 14px;
+    }
+
+    .page_number_up {
+      width: 180px;
+    }
+
+    .page_number_down {
+      .line {
+        width: 180px;
+      }
+    }
+  }
+}

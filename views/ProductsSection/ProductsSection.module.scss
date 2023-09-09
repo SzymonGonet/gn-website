@@ -1,0 +1,158 @@
+.produkty {
+  position: relative;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 850px;
+    height: calc(100vh - 80px);
+    margin: 0 auto;
+    max-width: 1540px;
+
+    .header {
+      font-size: 32px;
+      text-align: center;
+
+      .cennik {
+        padding-top: 60px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-size: 16px;
+        font-weight: 400;
+        margin-bottom: 20px;
+      }
+
+      .wrapper {
+        display: flex;
+        position: relative;
+
+        height: 34px;
+        justify-content: center;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+
+        #tworzymy {
+          display: flex;
+          width: 560px;
+          align-items: center;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          font-size: 22px;
+
+          .words {
+            span {
+              position: absolute;
+              top: 0;
+              opacity: 0;
+              text-align: left;
+              padding-left: 10px;
+              font-size: 28px;
+              color: var(--primary2);
+              background-image: var(--primary2);
+              background-clip: var(--primary2);
+              -webkit-background-clip: text;
+              -webkit-text-fill-color: transparent;
+              animation: spin_words 7s ease-in-out infinite;
+            }
+
+            & span:nth-of-type(1) {
+              animation-delay: 0s;
+            }
+
+            & span:nth-of-type(2) {
+              animation-delay: 2.33s;
+            }
+            & span:nth-of-type(3) {
+              animation-delay: 4.66s;
+            }
+
+            @keyframes spin_words {
+              0% {
+                opacity: 0;
+                transform: translateY(-10px);
+              }
+              5% {
+                opacity: 1;
+                transform: translateY(0px);
+              }
+              28% {
+                opacity: 1;
+                transform: translateY(0px);
+              }
+              33% {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+              100% {
+                opacity: 0;
+                transform: translateY(10px);
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .product_container {
+      display: flex;
+      justify-content: center;
+      text-align: center;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .produkty {
+    .container {
+      .header {
+        .cennik {
+          padding-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .produkty {
+    .container {
+      height: 700px;
+      min-height: auto;
+      padding-top: 80px;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .produkty {
+    .container {
+      height: 100%;
+      padding: 80px 15px 0px 15px;
+
+      .header {
+        .wrapper {
+          #tworzymy {
+            width: 360px;
+            font-size: 14px;
+            height: 19px;
+
+            .words {
+              span {
+                font-size: 15px;
+              }
+            }
+          }
+        }
+      }
+
+      .product_container {
+        display: block;
+        width: 100%;
+        max-width: 500px;
+        margin: 0 auto;
+      }
+    }
+  }
+}

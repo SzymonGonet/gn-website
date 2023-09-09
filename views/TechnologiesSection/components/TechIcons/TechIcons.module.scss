@@ -1,0 +1,53 @@
+.icons_container {
+  display: flex;
+
+  .icon {
+    margin: 15px 0;
+    align-items: flex-start;
+    text-align: center;
+    transition: 300ms;
+
+    #icon_name {
+      margin-top: 5px;
+    }
+
+    svg {
+      border-radius: 10px;
+      width: 45px;
+      height: 45px;
+    }
+
+    &:hover {
+      transform: scale(115%);
+      transition: 300ms;
+    }
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .icons_container {
+    .icon {
+      svg {
+        width: 40px;
+        height: 40px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .icons_container {
+    justify-content: center;
+
+    .icon {
+      #icon_name {
+        margin-top: 5px;
+        font-size: 14px;
+      }
+
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+}

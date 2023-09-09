@@ -1,0 +1,27 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: "Montserrat", -apple-system, BlinkMacSystemFont, Segoe UI, Roboto,
+    Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+
+  --primary: #2b1cf7;
+  --primary2: linear-gradient(to top, #8633da 0%, #45aaf2 100%);
+  --primary-line: linear-gradient(to right, #8633da 0%, #45aaf2 100%);
+  --secondary: #f6f6f6;
+  --background-image: linear-gradient(to top right, #8633da 0%, #45aaf2 100%);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: local("Montserrat"), url("../public/fonts/Montserrat.ttf");
+}

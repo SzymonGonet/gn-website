@@ -1,0 +1,45 @@
+.page_number {
+  position: absolute;
+  left: 0;
+  bottom: 140px;
+  color: var(--primary);
+
+  .page_number_up {
+    width: 250px;
+    text-align: center;
+  }
+
+  .page_number_down {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    letter-spacing: 5px;
+
+    .line {
+      width: 250px;
+      margin-right: 20px;
+      height: 1px;
+      background: var(--primary);
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .page_number {
+    span {
+      font-size: 14px;
+    }
+
+    bottom: 55px;
+
+    .page_number_up {
+      width: 180px;
+    }
+
+    .page_number_down {
+      .line {
+        width: 180px;
+      }
+    }
+  }
+}
